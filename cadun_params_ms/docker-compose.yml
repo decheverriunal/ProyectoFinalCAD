@@ -1,0 +1,32 @@
+version: "3.8"
+name: cadun
+services:
+  params-db:
+    image: mongo:latest
+    container_name: params_db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=cadun
+      - MONGO_INITDB_ROOT_PASSWORD=cadun
+      - MONGO_INITDB_DATABASE=params
+    ports:
+      - "27019:27017"
+    volumes:
+      - params_db_data:/data/db
+      - params_db_config:/data/configdb
+
+  params-ms:
+    build: .
+    image: cadun_params_ms
+    container_name: params_ms
+    environment:
+      - MONGO_URI=mongodb://cadun:cadun@params-db:27017/orders?authSource=admin
+    ports:
+      - "4000:4000"
+    depends_on:
+      - params-db
+    links:
+      - params-db
+
+volumes:
+  params_db_data:
+  params_db_config:
