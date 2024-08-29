@@ -1,0 +1,69 @@
+mutation AddUserMutation($user: addUserInput!){
+  addUser(user: $user) {
+    id,
+    names,
+    lastNames,
+    alias,
+    password,
+    eMail,
+    phoneNumber,
+    country
+  }
+}
+
+{
+  "user": {
+    "names": "c",
+    "lastNames": "c",
+    "alias": "a",
+    "password": "qqqq",
+    "eMail": "gfgfgfg@dfdff.hjh",
+    "phoneNumber": "123-456-7891",
+    "country": "Colombia"
+  }
+}
+
+
+mutation AddOrderMutation($order: addOrderInput!){
+  addOrder(order: $order) {
+    id,
+    user_email,
+    diameter,
+    length,
+    thickness,
+    state
+  }
+}
+
+{
+  "order": {
+    "user_email": "aaa@aaa.aaa",
+    "diameter": 141.141,
+    "length": 141.141,
+    "thickness": 141.141,
+    "state": "hecho"
+  }
+}
+
+
+mutation UpdateOrder($id: ID!, $edits: editOrderInput!){
+  updateOrder(id: $id, edits: $edits) {
+    id,
+    user_email,
+    diameter,
+    length,
+    thickness,
+    state
+  }
+}
+
+{
+  "edits": {
+    "user_email": "aaa@aaa.aaa",
+    "diameter": 141.141,
+    "length": 141.141,
+    "thickness": 141.141,
+    "state": "hecho"
+  },
+  "id": "xHQa9R4nVtn7mamN"
+}

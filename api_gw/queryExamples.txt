@@ -1,0 +1,50 @@
+query GetOrders {
+  getOrders {
+    diameter
+    id
+    length
+    state
+    thickness
+    user_email
+  }
+}
+
+
+query GetOrder($getOrderId: ID!) {
+  getOrder(id: $getOrderId) {
+    diameter
+    id
+    length
+    state
+    thickness
+    user_email
+  }
+}
+
+{
+  "getOrderId": "xHQa9R4nVtn7mamN"
+}
+
+
+query GetUser($id: ID!) {
+  getUser(id: $id) {
+    id
+    names
+    lastNames
+    alias
+    password
+    country
+    eMail
+    phoneNumber
+    userElements {
+      IAM_URL
+      PDF_URL
+      QUOTE_PDF_URL
+      id
+    }
+  }
+}
+
+{
+  "id": "UGd9zI6OryAxJcEZ"
+}
