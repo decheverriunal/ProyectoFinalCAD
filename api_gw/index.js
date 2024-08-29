@@ -87,6 +87,15 @@ const resolvers = {
             }
             testData.orders.push(order)
             return order
+        },
+        updateOrder(_, args) {
+            testData.orders = testData.orders.map((order) => {
+                if (order.id === args.id) {
+                    return {...order, ...args.edits}
+                }
+                return order
+            })
+            return testData.orders.find((order) => order.id === args.id)
         }
     }
 }

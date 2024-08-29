@@ -52,6 +52,7 @@ export const typeDefs = `#graphql
         addUser(user: addUserInput!): USERS_PROFILE
         addUserElement(userElement: addUserElementInput!): USERS_ELEMENTS_FOR_QUOTATION
         addOrder(order: addOrderInput!): Order
+        updateOrder(id: ID!, edits: editOrderInput!): Order
     }
 
     input addUserInput {
@@ -76,6 +77,14 @@ export const typeDefs = `#graphql
         length: Float!
         thickness: Float!
         state: String!
+    }
+
+    input editOrderInput {
+        user_email: String
+        diameter: Float
+        length: Float
+        thickness: Float
+        state: String
     }
 `
 
