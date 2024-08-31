@@ -1,0 +1,160 @@
+    Buscar todas las ordenes
+
+        Endpoint: GET http://localhost:3000/getOrders
+
+
+    Buscar orden por ID
+
+        Endpoint: GET http://localhost:3000/getOrder/:id
+
+            Ejemplo: GET http://localhost:3000/getOrder/pohJQ3OcHI8GiUl6
+
+                Respuesta: {
+                                "data": {
+                                    "id": "pohJQ3OcHI8GiUl6",
+                                    "user_email": "VBJQ98itwEy@tglaxt.kzl",
+                                    "diameter": 1465.2720465605887,
+                                    "length": 3825.60192361572,
+                                    "thickness": 70.1983122809497,
+                                    "state": "hOzccZW QMdVHpwA"
+                                }
+                            }
+
+
+    Obtener datos de usuario por ID
+
+        Endpoint: GET http://localhost:3000/getUserData/:id
+
+            Ejemplo: GET http://localhost:3000/getUserData/m6949hIJGDqouJO7
+
+                Respuesta: {
+                                "data": {
+                                    "id": "m6949hIJGDqouJO7",
+                                    "names": "Abdulkhader Aray",
+                                    "lastNames": "Aamot Abajian",
+                                    "alias": "tHFKfH39Gv7",
+                                    "password": "ZxODtDCsX",
+                                    "eMail": "D381brBTwz@lyopsrhtx.lwj",
+                                    "phoneNumber": "412-516-5008",
+                                    "country": "Germany"
+                                }
+                            }
+
+
+    Buscar request por ID
+
+        Endpoint: GET http://localhost:3000/getRequest/:id
+
+            Ejemplo: GET http://localhost:3000/getRequest/fPUYHoXjMWUoHzYA
+
+                Respuesta: {
+                                "data": {
+                                    "id": "fPUYHoXjMWUoHzYA",
+                                    "request_status": "4",
+                                    "idUser": "8aa4tgfdi6Gvji8s"
+                                }
+                            }
+
+
+    Registrar usuario
+
+        Endpoint: POST http://localhost:3000/registerUser
+
+            Ejemplo: POST http://localhost:3000/registerUser
+
+                Body:  {
+                            "user": {
+                                "names": "c",
+                                "lastNames": "c",
+                                "alias": "a",
+                                "password": "qqqq",
+                                "eMail": "gfgfgfg@dfdff.hjh",
+                                "phoneNumber": "123-456-7891",
+                                "country": "Colombia"
+                            }
+                        }
+
+                Respuesta: {
+                                "data": {
+                                    "names": "c",
+                                    "lastNames": "c",
+                                    "alias": "a",
+                                    "password": "qqqq",
+                                    "eMail": "gfgfgfg@dfdff.hjh",
+                                    "phoneNumber": "123-456-7891",
+                                    "country": "Colombia",
+                                    "id": "KkbexKRyuHp5Geo2"
+                                }
+                            }
+
+
+    Crear orden
+
+        Endpoint: POST http://localhost:3000/createOrder
+
+            Ejemplo: POST http://localhost:3000/createOrder
+
+                Body:  {
+                            "order": {
+                                "user_email": "aaa@aaa.aaa",
+                                "diameter": 141.141,
+                                "length": 141.141,
+                                "thickness": 141.141,
+                                "state": "hecho"
+                            }
+                        }
+
+                Respuesta: {
+                                "data": {
+                                    "user_email": "aaa@aaa.aaa",
+                                    "diameter": 141.141,
+                                    "length": 141.141,
+                                    "thickness": 141.141,
+                                    "state": "hecho",
+                                    "id": "4mr586oXUZlWznSS"
+                                }
+                            }
+
+
+    Actualizar orden
+
+        Endpoint: PUT http://localhost:3000/updateOrder
+
+            Ejemplo: PUT http://localhost:3000/updateOrder
+
+                Body:  {
+                            "edits": {
+                                "user_email": "aaa@aaa.aaa",
+                                "diameter": 141.141,
+                                "length": 141.141,
+                                "thickness": 141.141,
+                                "state": "hecho"
+                            },
+                            "id": "xHQa9R4nVtn7mamN"
+                        }
+
+                Respuesta: {
+                                "data": {
+                                    "id": "xHQa9R4nVtn7mamN",
+                                    "user_email": "aaa@aaa.aaa",
+                                    "diameter": 141.141,
+                                    "length": 141.141,
+                                    "thickness": 141.141,
+                                    "state": "hecho"
+                                }
+                            }
+
+
+    Eliminar usuario
+
+        Endpoint: DELETE http://localhost:3000/deleteUser
+
+            Ejemplo: DELETE http://localhost:3000/deleteUser
+
+                Headers:    {
+                                "id": "KkbexKRyuHp5Geo2",
+                            }
+
+                Respuesta:  {
+                                "data": "hecho"
+                            }
