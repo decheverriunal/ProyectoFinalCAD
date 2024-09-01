@@ -1,0 +1,67 @@
+{
+    "getOrders" : {
+        "host": "http://localhost:",
+        "port": 3000,
+        "path" : "/getOrders"
+    },
+
+    "getOrder" : {
+        "host": "http://localhost:",
+        "port": 3000,
+        "path" : "/getOrder/"
+    },
+
+    "getUserData" : {
+        "host": "http://localhost:",
+        "port": 3000,
+        "path" : "/getUserData/"
+    },
+
+    "getRequest" : {
+        "host": "http://localhost:",
+        "port": 3000,
+        "path" : "/getRequest/"
+    },
+
+    "getUserElement" : {
+        "host": "http://localhost:",
+        "port": 3000,
+        "path" : "/getUserElement/"
+    },
+
+    "getUserElements" : {
+        "host": "http://localhost:",
+        "port": 3000,
+        "path" : "/getUserElements/"
+    },
+
+    "registerUser" : {
+        "host": "http://localhost:",
+        "port": 3000,
+        "path" : "/registerUser"
+    },
+
+    "createOrder" : {
+        "host": "http://localhost:",
+        "port": 3000,
+        "path" : "/createOrder"
+    },
+
+    "updateOrder" : {
+        "host": "http://localhost:",
+        "port": 3000,
+        "path" : "/updateOrder"
+    },
+
+    "updateUser" : {
+        "host": "http://localhost:",
+        "port": 3000,
+        "path" : "/updateUser"
+    },
+
+    "deleteUser" : {
+        "host": "http://localhost:",
+        "port": 3000,
+        "path" : "/deleteUser"
+    }
+}

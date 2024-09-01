@@ -32,6 +32,14 @@ router.get('/getRequest/:id',(req,res) => {
     res.send({ data: testData.requests.find((r) => r.id === req.params.id) });
 })
 
+router.get('/getUserElement/:id',(req,res) => {
+    res.send({ data: testData.usersElementsForQuotations.find((elem) => elem.id === req.params.id) });
+})
+
+router.get('/getUserElements/:id',(req,res) => {
+    res.send({ data: testData.usersElementsForQuotations.filter((elem) => elem.idUser === req.params.id) });
+})
+
 
 router.post('/registerUser',(req,res) => {
     let user = {
@@ -60,6 +68,16 @@ router.put('/updateOrder',(req,res) => {
         return order
     })
     res.send({ data: testData.orders.find((order) => order.id === req.body.id) });
+})
+
+router.put('/updateUser',(req,res) => {
+    testData.usersProfiles = testData.usersProfiles.map((user) => {
+        if (user.id === req.body.id) {
+            return {...user, ...req.body.edits}
+        }
+        return user
+    })
+    res.send({ data: testData.usersProfiles.find((user) => user.id === req.body.id) });
 })
 
 router.delete('/deleteUser',(req,res) => {
